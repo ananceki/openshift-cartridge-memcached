@@ -12,7 +12,7 @@ binaries="../../versions/$version/bin"
 
 pushd tmp
 
-git clone https://github.com/memcached/memcached memcached
+git clone https://github.com/ananceki/openshift-cartridge-memcached memcached
 cd memcached
 git checkout $version
 ./autogen.sh
