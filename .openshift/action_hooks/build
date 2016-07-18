@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf tmp
+
 set +e
 rm -rf tmp/memcached
 mkdir tmp
