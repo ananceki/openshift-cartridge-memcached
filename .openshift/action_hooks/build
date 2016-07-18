@@ -12,11 +12,11 @@ binaries="../../versions/$version/bin"
 
 pushd tmp
 
-git clone https://github.com/ananceki/openshift-cartridge-memcached memcached
+git clone https://github.com/memcached/memcached memcached
 cd memcached
 git checkout $version
 ./autogen.sh
-./configure --enable-sasl --enable-sasl-pwdb
+./configure
 make -j 2
 
 mkdir -p $binaries
