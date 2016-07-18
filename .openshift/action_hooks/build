@@ -8,7 +8,7 @@ set -e
 set -x
 exec 2>&1
 version=${MEMCACHED_TAG:-1.4.20}
-rm -rf versions/$version
+#rm -rf versions/$version
 binaries="../../versions/$version/bin"
 
 pushd tmp
@@ -20,7 +20,7 @@ git checkout $version
 ./configure
 make -j 2
 
-mkdir -p $binaries
+#mkdir -p $binaries
 
 echo $(git rev-parse $version) > $binaries/.gitcommit
 for file in memcached scripts/memcached-tool; do
